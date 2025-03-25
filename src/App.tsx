@@ -6,7 +6,7 @@ import SearchResult from './assets/components/SearchResult.tsx';
 import AboutUs from './assets/components/AboutUs.tsx';
 
 const App = () => {
-    const apiKeyString = "DEMO_KEY"; //
+    const apiKeyString = "DEMO_KEY"; //get you own API key from https://fdc.nal.usda.gov/api-key-signup.html
     
     const [selectedFood, setSelectedFood] = useState<any | null>(null);
 

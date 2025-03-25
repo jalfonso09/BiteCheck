@@ -7,7 +7,7 @@ const AboutUs = () => {
                 className="d-flex flex-column flex-md-row align-items-center justify-content-center text-center text-md-start" 
                 style={{ minHeight: "300px", maxWidth: "900px", margin: "auto", padding: "20px" }}
             >
-                {/* Text Section - Appears on top on mobile, left on PC */}
+                
                 <div className="p-4" style={{ maxWidth: "600px" }}>
                     <h1 className="fw-semibold">
                         Stay fit and healthy<br />
@@ -22,7 +22,7 @@ const AboutUs = () => {
                     </p>
                 </div>
 
-                {/* Button Section - Moves to the right on PC, stays below & centered on mobile */}
+                
                 <div 
                     className="p-4 w-100 w-md-auto d-flex flex-column align-items-center align-items-md-end" 
                     style={{ maxWidth: "600px" }}
@@ -44,7 +44,6 @@ const AboutUs = () => {
                         Join Now!
                     </Button>
                     
-                    {/* Now aligned properly below the button */}
                     <p className="text-secondary mt-2" style={{fontSize:".8rem"}}>*Cancel anytime for free!</p>
                 </div>
             </div>

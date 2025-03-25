@@ -4,7 +4,7 @@ import debounce from "lodash.debounce";
 
 interface CalorieCheckProps {
     apiKey: string;
-    onSelectFood: (food: any) => void; // Callback function to pass selected food
+    onSelectFood: (food: any) => void; 
 }
 
 const CalorieCheck: React.FC<CalorieCheckProps> = ({ apiKey, onSelectFood }) => {
@@ -12,15 +12,15 @@ const CalorieCheck: React.FC<CalorieCheckProps> = ({ apiKey, onSelectFood }) => 
     const [suggestions, setSuggestions] = useState<any[]>([]);
     const [loading, setLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
-    const [searchCount, setSearchCount] = useState<number>(0); // Track searches
-    const [showSuggestions, setShowSuggestions] = useState<boolean>(false); // Control visibility
+    const [searchCount, setSearchCount] = useState<number>(0); 
+    const [showSuggestions, setShowSuggestions] = useState<boolean>(false); 
 
-    const cacheRef = useRef<Map<string, any>>(new Map()); // Cache API results to minimize requests
-    const controllerRef = useRef<AbortController | null>(null); // Handle request cancellation
+    const cacheRef = useRef<Map<string, any>>(new Map()); 
+    const controllerRef = useRef<AbortController | null>(null); 
     
-    const MAX_SEARCHES = 10; // Set search limit per session
+    const MAX_SEARCHES = 10; 
 
-    // Fetch food suggestions from API
+    
     const fetchSuggestions = async (searchString: string) => {
         if (!searchString || searchString.length < 3) {
             setSuggestions([]);
@@ -44,7 +44,7 @@ const CalorieCheck: React.FC<CalorieCheckProps> = ({ apiKey, onSelectFood }) => 
         setError(null);
 
         if (controllerRef.current) {
-            controllerRef.current.abort(); // Cancel previous request if new input comes in
+            controllerRef.current.abort(); 
         }
 
         controllerRef.current = new AbortController();
@@ -58,7 +58,7 @@ const CalorieCheck: React.FC<CalorieCheckProps> = ({ apiKey, onSelectFood }) => 
             const data = await response.json();
             setSuggestions(data.foods || []);
             cacheRef.current.set(searchString, data.foods || []);
-            setSearchCount((prev) => prev + 1); // Increase search count
+            setSearchCount((prev) => prev + 1); 
             setShowSuggestions(true);
         } catch (error) {
             if (error instanceof Error && error.name !== "AbortError") {
@@ -85,8 +85,8 @@ const CalorieCheck: React.FC<CalorieCheckProps> = ({ apiKey, onSelectFood }) => 
 
     // Handle user selecting a food item
     const handleSelectFood = (food: any) => {
-        setQuery(food.description); // Update input field
-        onSelectFood(food); // Pass full food object to parent
+        setQuery(food.description); 
+        onSelectFood(food); 
         setShowSuggestions(false);
     };
 

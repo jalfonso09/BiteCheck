@@ -33,9 +33,6 @@ npm install
 Start the development server:
 
 npm run dev
-<<<<<<< HEAD
-=======
-
 
 Note: you will need an API key and replace DEMO_KEY from App.tsx, but its easy to acquire! just visit: https://fdc.nal.usda.gov/api-key-signup
->>>>>>> af1e045 (Api Key Instructions)
+
