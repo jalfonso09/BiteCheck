@@ -6,7 +6,7 @@ import SearchResult from './assets/components/SearchResult.tsx';
 import AboutUs from './assets/components/AboutUs.tsx';
 
 const App = () => {
-    const apiKeyString = "CgSEMmrwjJ8dL6sClziG37e6Jh3ohBwBM7OzfvhV";
+    const apiKeyString = "";
     
     const [selectedFood, setSelectedFood] = useState<any | null>(null); // Store selected food
 
