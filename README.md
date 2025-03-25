@@ -32,4 +32,4 @@ npm install
 ▶️ 3. Run the Project
 Start the development server:
 
-npm start
+npm run dev
