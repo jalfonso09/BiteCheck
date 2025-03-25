@@ -14,8 +14,8 @@ interface SearchResultProps {
 const SearchResult: React.FC<SearchResultProps> = ({ selectedFood }) => {
   if (!selectedFood) {
     return (
-      <>
-      </>
+      <div className="p-3 pb-5" style={{background: "#019689"}}>
+      </div>
     );
       
   }
@@ -27,7 +27,7 @@ const SearchResult: React.FC<SearchResultProps> = ({ selectedFood }) => {
   };
   
   return (
-    <div className="p-3" style={{background: "#019689"}}>
+    <div className="p-3 pb-5" style={{background: "#019689"}}>
       <Container className="mt-4 d-flex flex-wrap justify-content-center gap-3" style={{ maxWidth: "900px" }}>
       <h2 className="w-100 text-center text-white">{selectedFood.description}</h2>
 

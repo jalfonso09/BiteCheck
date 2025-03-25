@@ -6,7 +6,7 @@ function Header() {
         const element = document.getElementById(id);
         if (element) {
             window.scrollTo({
-                top: element.offsetTop - 50, // Adjust for fixed navbar height
+                top: element.offsetTop - 50, 
                 behavior: "smooth",
             });
         }

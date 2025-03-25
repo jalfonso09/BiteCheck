@@ -6,9 +6,9 @@ import SearchResult from './assets/components/SearchResult.tsx';
 import AboutUs from './assets/components/AboutUs.tsx';
 
 const App = () => {
-    const apiKeyString = "";
+    const apiKeyString = "DEMO_KEY"; //
     
-    const [selectedFood, setSelectedFood] = useState<any | null>(null); // Store selected food
+    const [selectedFood, setSelectedFood] = useState<any | null>(null);
 
     return (
         <>
